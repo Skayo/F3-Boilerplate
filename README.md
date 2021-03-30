@@ -1,6 +1,6 @@
 # Fat-Free Framework Boilerplate
 
-This is a simple boilerplate for Projects using the Fat-Free Framework (F3).
+This is a simple boilerplate for Projects using the [Fat-Free Framework](https://fatfreeframework.com/).
 
 ## Getting Started
 

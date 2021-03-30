@@ -29,14 +29,14 @@ $f3 = \Base::instance();
 /*
  * Absolute path to document root folder.
  */
-$f3->set('ROOT', ROOT);
+$f3->ROOT = ROOT;
 
 
 /**
  * Environment in which the app runs (production OR development)
  * THIS IS A CUSTOM VARIABLE - NOT USED BY THE FRAMEWORK
  */
-$f3->set('ENV', $_ENV['APP_ENV'] ?? 'production');
+$f3->ENV = $_ENV['APP_ENV'] ?? 'production';
 
 
 /**
@@ -44,7 +44,7 @@ $f3->set('ENV', $_ENV['APP_ENV'] ?? 'production');
  * Changing this value automatically calls the underlying PHP function date_default_timezone_set().
  * See https://php.net/manual/en/timezones.php
  */
-$f3->set('TZ', $_ENV['APP_TIMEZONE'] ?? 'UTC');
+$f3->TZ = $_ENV['APP_TIMEZONE'] ?? 'UTC';
 
 
 /**
@@ -52,7 +52,7 @@ $f3->set('TZ', $_ENV['APP_TIMEZONE'] ?? 'UTC');
  * Uses a hash generated from the server name by default.
  */
 if (isset($_ENV['APP_SEED'])) {
-	$f3->set('SEED', $_ENV['APP_SEED']);
+	$f3->SEED = $_ENV['APP_SEED'];
 }
 
 
@@ -64,7 +64,7 @@ if (isset($_ENV['APP_SEED'])) {
  * 2: logs classes & functions as well.
  * 3: logs detailed infos of the objects as well.
  */
-$f3->set('DEBUG', $f3->get('ENV') === 'production' ? 0 : 3);
+$f3->DEBUG = $f3->ENV === 'production' ? 0 : 3;
 
 
 /*
@@ -72,39 +72,39 @@ $f3->set('DEBUG', $f3->get('ENV') === 'production' ? 0 : 3);
  * When specifying multiple paths, you can use a pipe (|), comma (,), or semi-colon (;) as path separator.
  * See https://fatfreeframework.com/3.7/routing-engine#the-f3-autoloader
  */
-$f3->set('AUTOLOAD', ROOT . '/app/');
+$f3->AUTOLOAD = ROOT . '/app/';
 
 
 /*
  * Search path for user interface files used by the View and Template classes' render() method.
  * Accepts a pipe (|), comma (,), or semi-colon (;) as separator for multiple paths.
  */
-$f3->set('UI', ROOT . '/resources/views/');
+$f3->UI = ROOT . '/resources/views/';
 
 
 /*
  * Location of the language(s) dictionaries.
  * To enable caching for dictionaries from a config file, add a second parameter with the TTL.
  */
-$f3->set('LOCALES', ROOT . '/resources/lang/');
+$f3->LOCALES = ROOT . '/resources/lang/';
 
 
 /*
  * Temporary folder for filesystem locks, compiled F3 templates, etc.
  */
-$f3->set('TEMP', ROOT . '/storage/tmp/');
+$f3->TEMP = ROOT . '/storage/tmp/';
 
 
 /*
  * Location of custom logs.
  */
-$f3->set('LOGS', ROOT . '/storage/logs/');
+$f3->LOGS = ROOT . '/storage/logs/';
 
 
 /*
  * Directory where file uploads are saved.
  */
-$f3->set('UPLOADS', ROOT . '/storage/uploads/');
+$f3->UPLOADS = ROOT . '/storage/uploads/';
 
 
 /*
@@ -121,11 +121,11 @@ $f3->set('UPLOADS', ROOT . '/storage/uploads/');
  *
  * The framework doesn't use any cache engine when a FALSE value is assigned.
  */
-$f3->set('CACHE', 'folder=' . ROOT . '/storage/cache/');
+$f3->CACHE = 'folder=' . ROOT . '/storage/cache/';
 
 
 /*
  * A string containing the X-Powered-By header.
  * If empty, the header is not sent.
  */
-$f3->set('PACKAGE', null);
+$f3->PACKAGE = null;

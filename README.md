@@ -9,7 +9,7 @@ This is a simple boilerplate for Projects using the [Fat-Free Framework](https:/
    composer install
    ```
 
-2. Copy `.env.example` to '.env'
+2. Copy `.env.example` to `.env`
 
 3. Done. You can quickly get up and running by starting the PHP in-built web server:
    ```properties

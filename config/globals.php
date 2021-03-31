@@ -129,3 +129,18 @@ $f3->CACHE = 'folder=' . ROOT . '/storage/cache/';
  * If empty, the header is not sent.
  */
 $f3->PACKAGE = null;
+
+
+/**
+ * Simple Error Handler.
+ * Feel free to customize this however you want!
+ *
+ * @param \Base $f3
+ */
+$f3->ONERROR = function (\Base $f3) {
+	$logger = new \Log(date('Y-m-d') . '.txt');
+	$error = $f3->ERROR;
+
+	$logger->write($error['text'] . "\n" . $error['trace']);
+	echo \View::instance()->render('_error.php', 'text/html', $error);
+};

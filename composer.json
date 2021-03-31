@@ -1,6 +1,7 @@
 {
 	"name": "skayo/f3-boilerplate",
 	"description": "Boilerplate for creating Web Applications with F3 (Fat-Free Framework)",
+	"license": "MIT",
 	"require": {
 		"bcosca/fatfree-core": "^3.7",
 		"vlucas/phpdotenv": "^5.3"

@@ -51,8 +51,8 @@ $f3->TZ = $_ENV['APP_TIMEZONE'] ?? 'UTC';
  * Seed used for CSRF token generation and as prefix name for cache entries and temp filenames.
  * Uses a hash generated from the server name by default.
  */
-if (isset($_ENV['APP_SEED'])) {
-	$f3->SEED = $_ENV['APP_SEED'];
+if (!empty($_ENV['APP_SEED'])) {
+	$f3->SEED = $f3->hash($_ENV['APP_SEED']);
 }
 
 

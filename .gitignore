@@ -5,7 +5,11 @@ composer.lock
 .env
 
 storage/cache/*
-!storage/cache/.gitkeep
-
 storage/logs/*
+storage/tmp/*
+storage/uploads/*
+
+!storage/cache/.gitkeep
 !storage/logs/.gitkeep
+!storage/tmp/.gitkeep
+!storage/uploads/.gitkeep

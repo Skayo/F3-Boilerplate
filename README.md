@@ -4,17 +4,19 @@ This is a simple boilerplate for Projects using the [Fat-Free Framework](https:/
 
 ## Getting Started
 
-1. Install Composer and then run:
-   ```properties
-   composer install
-   ```
+### With `composer create-project`
 
-2. Copy `.env.example` to `.env`
+Replace `my-project` with your project name:
+```console
+composer create-project skayo/f3-boilerplate my-project
+```
 
-3. Done. You can quickly get up and running by starting the PHP in-built web server:
-   ```properties
-   php -S localhost:8080 -t public
-   ```
+### With `composer install`
+
+Clone this repository and then run:
+```console
+composer install
+```
 
 ## Directory Structure
 

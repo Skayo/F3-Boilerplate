@@ -17,6 +17,7 @@ Clone this repository and then run:
 ```console
 composer install
 ```
+Then copy `.env.example` to `.env`
 
 ## Directory Structure
 

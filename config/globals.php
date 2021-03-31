@@ -33,10 +33,10 @@ $f3->ROOT = ROOT;
 
 
 /**
- * Environment in which the app runs (production OR development)
+ * True if the app runs in a production environment
  * THIS IS A CUSTOM VARIABLE - NOT USED BY THE FRAMEWORK
  */
-$f3->ENV = $_ENV['APP_ENV'] ?? 'production';
+$f3->PRODUCTION = isset($_ENV['APP_ENV']) && $_ENV['APP_ENV'] === 'production';
 
 
 /**
